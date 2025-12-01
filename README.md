@@ -154,12 +154,6 @@ As atividades práticas incluem exercícios de:
 - Observatório COVID-19 Fiocruz
 - Portal Brasileiro de Dados Abertos
 
-### CURSOS ONLINE
-- Coursera: R Programming (Johns Hopkins)
-- edX: Data Science with R
-- Curso-R: cursos em português
-- YouTube: canais educacionais em R
-
 ### CHEAT SHEETS (FOLHAS DE COLA)
 - RStudio IDE Cheat Sheet
 - dplyr Data Transformation
