@@ -11,10 +11,10 @@ O curso está organizado em 3 módulos:
 | Módulo | Tema | Status |
 |--------|------|--------|
 | **Módulo 1** | Introdução à Lógica de Programação | ✅ Disponível |
-| **Módulo 2** | Estatística Descritiva e Comunicação de Resultados | 🔜 Em breve |
+| **Módulo 2** | Estatística Descritiva e Comunicação de Resultados | ✅ Disponível |
 | **Módulo 3** | Modelos estatísticos | 🔜 Em breve |
 
-> **Nota:** Os materiais práticos dos Módulos 2 e 3 serão disponibilizados em breve neste repositório.
+> **Nota:** Os materiais práticos do Módulo 3 serão disponibilizados em breve neste repositório.
 
 ---
 
@@ -35,6 +35,28 @@ O curso está organizado em 3 módulos:
 | PDF | `modulo1aula2_gabarito_atividade.pdf` | Gabarito dos resultados |
 
 > **OBSERVAÇÃO:** Para responder as perguntas que estão em `modulo1aula2_atividades.pdf`, tente criar o seu código para encontrar as respostas, mas caso tenha dificuldades o gabarito em R (`modulo1aula2_atividades.R`) encontra-se na pasta.
+
+---
+
+### MÓDULO 2: Estatística Descritiva e Comunicação de Resultados
+
+**Aula 1:** Análise Exploratória e Descritiva
+
+| Tipo | Arquivo | Descrição |
+|------|---------|-----------|
+| Script | `modulo2aula1_atividades.R` | Atividades de estatística descritiva |
+| PDF | `modulo2aula1_atividades.pdf` | Descrição das atividades propostas |
+| PDF | `modulo2aula1_gabarito.pdf` | Gabarito dos resultados |
+
+**Aula 2:** Formas de Visualização de Dados
+
+| Tipo | Arquivo | Descrição |
+|------|---------|-----------|
+| Script | `modulo2aula2_atividades.R` | Atividades de visualização de dados |
+| PDF | `modulo2aula2_atividades.pdf` | Descrição das atividades propostas |
+| PDF | `modulo2aula2_gabarito.pdf` | Gabarito dos resultados |
+
+> **OBSERVAÇÃO:** Os scripts do Módulo 2 contêm comentários explicativos detalhados. Execute o código acompanhando os comentários para melhor compreensão.
 
 ---
 
@@ -75,6 +97,15 @@ A pasta `dados/` contém os arquivos utilizados nas atividades:
 - Manipulação de datas com `lubridate`
 - Importação e exportação de dados
 
+### Módulo 2 - Estatística Descritiva e Comunicação de Resultados
+
+- Classificação de variáveis (qualitativas e quantitativas)
+- Medidas de locação (média, mediana, quantis)
+- Medidas de dispersão (variância, desvio-padrão, CV, IQ)
+- Construção de gráficos com `ggplot2`
+- Boas práticas na visualização de dados
+- Importância da exploração visual (Quarteto de Anscombe, Datasaurus Dozen)
+
 ---
 
 ## 🚀 COMO UTILIZAR
@@ -94,6 +125,7 @@ install.packages("tidyverse")
 install.packages("lubridate")
 install.packages("readxl")
 install.packages("arrow")
+install.packages("datasauRus")
 ```
 
 > **OBSERVAÇÃO:** Lembre-se de ajustar o caminho do diretório de trabalho (`setwd()`) nos scripts para corresponder à localização dos arquivos no seu computador.
@@ -102,12 +134,20 @@ install.packages("arrow")
 
 ## 📝 ESTRUTURA DAS ATIVIDADES
 
-As atividades práticas do Módulo 1 incluem exercícios de:
+### Módulo 1
 
 - Criação de variáveis derivadas usando `mutate()` e `case_when()`
 - Contagem e sumarização de dados com `count()` e `group_by()`
 - Análise exploratória de dados de mortalidade
 - Transformação e limpeza de dados
+
+### Módulo 2
+
+- Cálculo de estatísticas descritivas (locação e dispersão)
+- Criação de funções personalizadas para análise
+- Construção de gráficos (barras, boxplot, histograma, dispersão)
+- Análise crítica de visualizações de dados
+- Aplicação de boas práticas em comunicação visual
 
 > **DICA:** Tente criar seu próprio código antes de consultar o gabarito!
 
@@ -139,6 +179,8 @@ As atividades práticas do Módulo 1 incluem exercícios de:
 
 - [R Graph Gallery](https://r-graph-gallery.com/)
 - [From Data to Viz](https://www.data-to-viz.com/)
+- [Data Viz Project](https://datavizproject.com/)
+- [Data Viz Catalogue](https://datavizcatalogue.com/)
 
 ### Dados de Saúde Pública
 
@@ -233,7 +275,12 @@ Este material foi desenvolvido para o curso **"Introdução à Análise de Dados
 ---
 
 **Última Atualização:** Dezembro 2025  
-**Versão:** 1.0 - Atualizado com 3 scripts CAMPUS VIRTUAL
+**Versão:** 2.0
+
+---
+
+*Desenvolvido com ❤️ para a comunidade de saúde pública brasileira*
+
 
 ---
 
