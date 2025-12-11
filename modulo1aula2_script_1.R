@@ -69,7 +69,7 @@ b <- "25"
 
 class(b) ## Verifique a classe de b
 
-as.numeric(b)
+b <- as.numeric(b)
 
 class(b) ## Após rodar o comando acima, verifique novamente a classe
 
