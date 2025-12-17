@@ -12,9 +12,7 @@ O curso está organizado em 3 módulos:
 |--------|------|--------|
 | **Módulo 1** | Introdução à Lógica de Programação | ✅ Disponível |
 | **Módulo 2** | Estatística Descritiva e Comunicação de Resultados | ✅ Disponível |
-| **Módulo 3** | Modelos estatísticos | 🔜 Em breve |
-
-> **Nota:** Os materiais práticos do Módulo 3 serão disponibilizados em breve neste repositório.
+| **Módulo 3** | Modelos Estatísticos | ✅ Disponível |
 
 ---
 
@@ -57,6 +55,44 @@ O curso está organizado em 3 módulos:
 | PDF | `modulo2aula2_gabarito.pdf` | Gabarito dos resultados |
 
 > **OBSERVAÇÃO:** Os scripts do Módulo 2 contêm comentários explicativos detalhados. Execute o código acompanhando os comentários para melhor compreensão.
+
+---
+
+### MÓDULO 3: Modelos Estatísticos
+
+**Aula 1:** Inferência Estatística
+
+| Tipo | Arquivo | Descrição |
+|------|---------|-----------|
+| Script | `modulo3aula1_atividades.R` | Atividades de inferência estatística |
+| PDF | `modulo3aula1_atividades.pdf` | Descrição das atividades propostas |
+| PDF | `modulo3aula1_gabarito.pdf` | Gabarito dos resultados |
+
+**Aula 2:** Modelos de Regressão
+
+| Tipo | Arquivo | Descrição |
+|------|---------|-----------|
+| Script | `modulo3aula2_atividades.R` | Atividades de modelos de regressão |
+| PDF | `modulo3aula2_atividades.pdf` | Descrição das atividades propostas |
+| PDF | `modulo3aula2_gabarito.pdf` | Gabarito dos resultados |
+
+**Aula 3:** Dados com Estruturas de Dependência
+
+| Tipo | Arquivo | Descrição |
+|------|---------|-----------|
+| Script | `modulo3aula3_atividades.R` | Atividades de modelos multiníveis, séries temporais e sobrevivência |
+| PDF | `modulo3aula3_atividades.pdf` | Descrição das atividades propostas |
+| PDF | `modulo3aula3_gabarito.pdf` | Gabarito dos resultados |
+
+**Aula 4:** Aplicação dos Modelos Estatísticos
+
+| Tipo | Arquivo | Descrição |
+|------|---------|-----------|
+| Script | `modulo3aula4_atividades.R` | Casos práticos: COVID-19, ensaio clínico e oncologia |
+| PDF | `modulo3aula4_atividades.pdf` | Descrição das atividades propostas |
+| PDF | `modulo3aula4_gabarito.pdf` | Gabarito dos resultados |
+
+> **OBSERVAÇÃO:** O Módulo 3 utiliza dados simulados para fins didáticos. Os scripts contêm explicações detalhadas de cada conceito estatístico, facilitando o aprendizado mesmo para quem não tem experiência prévia com modelagem.
 
 ---
 
@@ -106,6 +142,18 @@ A pasta `dados/` contém os arquivos utilizados nas atividades:
 - Boas práticas na visualização de dados
 - Importância da exploração visual (Quarteto de Anscombe, Datasaurus Dozen)
 
+### Módulo 3 - Modelos Estatísticos
+
+- Teorema Central do Limite e distribuição amostral
+- Intervalos de confiança para média e proporção
+- Testes de hipóteses (t de Student, ANOVA, teste de proporção)
+- Modelos de regressão linear simples e múltipla
+- Regressão logística e interpretação de Odds Ratios
+- Modelos multiníveis (hierárquicos)
+- Análise de séries temporais (decomposição, ARIMA)
+- Análise de sobrevivência (Kaplan-Meier, modelo de Cox)
+- Aplicação prática em estudos de saúde pública
+
 ---
 
 ## 🚀 COMO UTILIZAR
@@ -120,12 +168,19 @@ A pasta `dados/` contém os arquivos utilizados nas atividades:
 # Definir diretório de trabalho
 setwd("caminho/para/repositório")
 
-# Instalar pacotes necessários
+# Instalar pacotes necessários (Módulos 1 e 2)
 install.packages("tidyverse")
 install.packages("lubridate")
 install.packages("readxl")
 install.packages("arrow")
 install.packages("datasauRus")
+
+# Pacotes adicionais para o Módulo 3
+install.packages("broom")
+install.packages("lme4")
+install.packages("forecast")
+install.packages("survival")
+install.packages("survminer")
 ```
 
 > **OBSERVAÇÃO:** Lembre-se de ajustar o caminho do diretório de trabalho (`setwd()`) nos scripts para corresponder à localização dos arquivos no seu computador.
@@ -141,6 +196,8 @@ install.packages("datasauRus")
 - Análise exploratória de dados de mortalidade
 - Transformação e limpeza de dados
 
+> **DICA:** Tente criar seu próprio código antes de consultar o gabarito!
+
 ### Módulo 2
 
 - Cálculo de estatísticas descritivas (locação e dispersão)
@@ -149,7 +206,14 @@ install.packages("datasauRus")
 - Análise crítica de visualizações de dados
 - Aplicação de boas práticas em comunicação visual
 
-> **DICA:** Tente criar seu próprio código antes de consultar o gabarito!
+### Módulo 3
+
+- **Aula 1:** Simulação do Teorema Central do Limite, cálculo de intervalos de confiança, testes t (uma e duas amostras), ANOVA com teste de Tukey, teste de proporção
+- **Aula 2:** Correlação de Pearson, regressão linear simples e múltipla, regressão logística com Odds Ratios, diagnóstico de modelos
+- **Aula 3:** Modelos multiníveis com `lme4`, decomposição de séries temporais, modelos ARIMA, curvas de Kaplan-Meier e modelo de Cox
+- **Aula 4:** Aplicação integrada em três casos práticos de saúde pública (fatores de risco para COVID-19 grave, ensaio clínico comparando tratamentos, sobrevida em pacientes oncológicos)
+
+
 
 ---
 
@@ -228,6 +292,12 @@ install.packages("datasauRus")
 - Verificar se pacote está carregado (`library()`)
 - Reiniciar sessão R se necessário
 
+### Erros específicos do Módulo 3
+
+- **lme4 não instala:** Pode precisar de ferramentas de compilação. No Windows, instale o [Rtools](https://cran.r-project.org/bin/windows/Rtools/)
+- **Erro em forecast:** Verificar se a série temporal foi criada corretamente com `ts()`
+- **Erro em survival:** Certificar-se de que o objeto Surv() foi criado antes de usar survfit()
+
 ---
 
 ## ✨ BOAS PRÁTICAS DE PROGRAMAÇÃO
@@ -275,11 +345,8 @@ Este material foi desenvolvido para o curso **"Introdução à Análise de Dados
 ---
 
 **Última Atualização:** Dezembro 2025  
-**Versão:** 2.0
+**Versão:** 3.0
 
 ---
 
 *Desenvolvido com ❤️ para a comunidade de saúde pública brasileira*
-
-
----
